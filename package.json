@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cypress run --edge chrome"
+    "test": "cypress run --browser edge"
   },
   "keywords": [],
   "author": "",
