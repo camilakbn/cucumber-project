@@ -1,0 +1,21 @@
+{
+  "name": "cucumber-project",
+  "version": "1.0.0",
+  "description": "Installing and configuring Cypress Cucumber Preprocessor:",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  }
+}
