@@ -13,7 +13,7 @@ Cypress.Commands.add('loginGetBtnEntrar', () => {
       .should("be.visible")
 })
 
-Cypress.Commands.add("loginTostMessage", () => {
+Cypress.Commands.add("loginToastMessage", () => {
     cy.get("#toast-container .toast .toast-message ")
       .should("be.visible")
 })

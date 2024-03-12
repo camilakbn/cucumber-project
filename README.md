@@ -9,6 +9,7 @@ You need to have Node.js and npm (Node Package Manager) installed on your comput
 - Type 'npm install @badeball/cypress-cucumber-preprocessor' to install the cypress cucumber preprocessor;
 - If you want to use tysecript, type 'npm install --save-dev typescript';
 - Type 'npm i @bahmutov/cypress-esbuild-preprocessor' to install the esbuild preprocessor;
+- If you wish to use xpath, type 'npm install -D cypress-xpath', then add '/// < reference types="cypress-xpath" />' to your support/commands.js file; then add 'require('cypress-xpath');' to your support/e2e.js file;
 - Put the following code on cypress.config.js
 
 import { defineConfig } from "cypress";
@@ -37,4 +38,5 @@ export default defineConfig({
 });
 
 - Create the features and the tests;
+- When you create the elements and commands from your tests, you have to import them on your support/e2e.js files, for example 'import './commands'';
 - Type 'npx cypress open' to run your test on local browser or 'npm run test' to run on server;

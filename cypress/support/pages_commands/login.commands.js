@@ -9,7 +9,7 @@ Cypress.Commands.add('loginAbrir', () => {
 
  Cypress.Commands.add('loginTypeSenha', (senha) => {
     cy.loginGetInputSenha()
-      .type(senha)
+      .type(senha, {log:false})
  })
 
  Cypress.Commands.add('loginClicarEntrar', () => {
@@ -25,6 +25,6 @@ Cypress.Commands.add('loginAbrir', () => {
 
 
  Cypress.Commands.add("loginValidaMessagem", (messagem) => {
-   cy.loginTostMessage()
+   cy.loginToastMessage()
      .should("have.text", messagem)
  })
