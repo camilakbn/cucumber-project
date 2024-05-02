@@ -18,10 +18,8 @@ require('cypress-xpath');
 
 import './commands'
 import './pages_commands/login.commands'
-import './elements_commands/login.elements'
 import './pages_commands/pesquisar_servico.commands'
-import './elements_commands/pesquisar_servico.elements'
 import './pages_commands/editar_perfil.commands'
-import './elements_commands/editar_perfil.elements'
+import './pages_commands/cadastro.commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

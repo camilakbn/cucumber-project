@@ -2,18 +2,19 @@ import {Given, When, Then} from "@badeball/cypress-cucumber-preprocessor";
 
 let usuarioValido = {
     email: "camila12345@gmail.com",
-    senha: "123456",
+    password: "123456",
     message: "Logado com sucesso.",
 }
 
 let searchService = {
-    place: "recife"
+    place: "Recife"
 }
 
 Given("Estou autenticada com sucesso", () => {
-    cy.loginAbrir();
-    cy.loginSignIN(usuarioValido.email, usuarioValido.senha)
-    cy.loginValidaMessagem(usuarioValido.message)
+    cy.pageVisit()
+    cy.loginButton()
+    cy.loginSignIN(usuarioValido)
+    cy.loginToastMessage(usuarioValido.message)
 })
 
 When("Eu realizo a pesquisa dos serviços", () => {
@@ -22,5 +23,4 @@ When("Eu realizo a pesquisa dos serviços", () => {
 
 Then("O sistema me mostra os serviços disponíveis", () => {
     cy.searchResults()
-
 })

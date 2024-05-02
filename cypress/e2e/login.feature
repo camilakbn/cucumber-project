@@ -1,11 +1,13 @@
 Feature: Login
 
-Scenario: Login com usuario invalido
-  Given Estou tentando realizar login no sistema
-   When Passo um usuario e senha invalido
-   Then O sistema me notifca que as credencias nao sao validas
+Scenario: Login com usuário inválido
+  Given Eu entro no publicazo
+   When Eu clico em Entrar
+   And Passo um usuário e senha inválidos
+   Then O sistema me notifica que as credenciais não são válidas
 
-Scenario: Login com usuario valido
-  Given Estou tentando realizar login no sistema
-   When Passo um usuario valido
+Scenario: Login com usuário válido
+  Given Eu entro no publicazo
+   When Eu clico em Entrar
+   When Passo um usuário e senha válidos
    Then O sistema me autentica com sucesso

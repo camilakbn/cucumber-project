@@ -1,11 +1,19 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-// Given("Estou tentando realizar login no sistema", () => {
+let usuarioInvalido = {
+    email: "camila@gmail.com",
+    password: "12345",
+    message: "Email ou senha inválidos.",
+}
 
-When("Passo um usuario e senha invalido", () => {
-    cy.loginSignIN("camila@gmail.com", 12345678)
+When ("Eu clico em Entrar", () => {
+    cy.loginButton()
 })
 
-Then("O sistema me notifca que as credencias nao sao validas", () => {
-    cy.loginValidaMessagem("Email ou senha inválidos.")
+When("Passo um usuário e senha inválidos", () => {
+    cy.loginSignIN(usuarioInvalido)
+})
+
+Then("O sistema me notifica que as credenciais não são válidas", () => {
+    cy.loginToastMessage(usuarioInvalido.message)
 })

@@ -38,5 +38,8 @@ export default defineConfig({
 });
 
 - Create the features and the tests;
-- When you create the elements and commands from your tests, you have to import them on your support/e2e.js files, for example 'import './commands'';
+- When you create the elements and commands from your tests, you have to import them on your support/e2e.js files, for example "import './commands'";
+
+- To put fake data on your project, type 'npm install --save-dev @faker-js/faker' and import to your steps files. You can see the right way to do it here: https://www.npmjs.com/package/@faker-js/faker
+
 - Type 'npx cypress open' to run your test on local browser or 'npm run test' to run on server;
